@@ -411,3 +411,15 @@ const iranians = users.filter(user => user.country === "Iran");
 const iranianNames = iranians.map(
   iranian => `${iranian.firstName} - ${iranian.lastName}`,
 );
+
+/////////////////// A - 3 ///////////////////
+
+const polygenderUsers = users.filter(
+  user =>
+    user.gender.toLowerCase() !== "Male".toLowerCase() &&
+    user.gender.toLowerCase() !== "Female".toLowerCase(),
+);
+
+const polygenderUsersBalance = polygenderUsers.map(
+  user => user.balance,
+);
