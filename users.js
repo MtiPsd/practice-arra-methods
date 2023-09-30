@@ -520,3 +520,15 @@ function getInfoOfYoungMembers(array) {
 }
 
 getInfoOfYoungMembers(users);
+
+/////////////////// A - 12 ///////////////////
+
+function getRichestUserInfo(array) {
+  const richestUser = array.reduce((acc, cur) => {
+    return acc.balance > cur.balance ? acc : cur;
+  });
+
+  return `${richestUser.firstName} - ${richestUser.lastName} - ${richestUser.country}`;
+}
+
+getRichestUserInfo(users);
