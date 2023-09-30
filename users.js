@@ -496,3 +496,16 @@ function getTotalBalanceOfMaleUsers(array) {
 }
 
 getTotalBalanceOfMaleUsers(users);
+
+/////////////////// A - 10 ///////////////////
+
+const teenRussians = users.filter(
+  user =>
+    user.country.toLowerCase() === "Russia".toLowerCase() &&
+    user.age < 30,
+);
+
+const averageBalance = teenRussians.reduce(
+  (acc, cur) => acc + cur.balance / teenRussians.length,
+  0,
+);
