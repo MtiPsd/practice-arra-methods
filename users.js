@@ -463,3 +463,24 @@ const usersWithSpacialEmails = users.filter(user =>
 const usersBalanceWithSpacialEmails = usersWithSpacialEmails.map(
   user => user.balance,
 );
+
+/////////////////// A - 8 ///////////////////
+
+// with filter
+const frenchUsers1 = users.filter(user => user.country === "France");
+
+const frenchUsersCount1 = frenchUsers1.length;
+
+// with reduce
+const frenchUsers2 = users.reduce((acc, cur) => {
+  const isFrench =
+    cur.country.toLowerCase() === "France".toLowerCase();
+
+  if (isFrench) {
+    acc.push(cur);
+  }
+
+  return acc;
+}, []);
+
+const frenchUsersCount2 = frenchUsers2.length;
