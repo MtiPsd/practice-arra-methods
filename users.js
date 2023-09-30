@@ -551,3 +551,16 @@ function getRussianInfo(array) {
 }
 
 getRussianInfo(users);
+
+/////////////////// A - 14 ///////////////////
+
+function getUsersWitchContainGr(array) {
+  return array.filter(user => {
+    return (
+      user.firstName.toLowerCase().includes("gr") ||
+      user.lastName.toLowerCase().includes("gr")
+    );
+  });
+}
+
+getUsersWitchContainGr(users);
