@@ -564,3 +564,26 @@ function getUsersWitchContainGr(array) {
 }
 
 getUsersWitchContainGr(users);
+
+/////////////////// A - 15 ///////////////////
+
+function getYoungFemaleAccountDetails(array) {
+  return array.reduce((acc, cur) => {
+    const condition =
+      cur.gender.toLowerCase() === "Female".toLowerCase() &&
+      cur.age < 40;
+
+    if (condition) {
+      const accountDetail = {
+        name: `${cur.firstName} ${cur.lastName}`,
+        balance: cur.balance,
+      };
+
+      acc.push(accountDetail);
+    }
+
+    return acc;
+  }, []);
+}
+
+getYoungFemaleAccountDetails(users);
