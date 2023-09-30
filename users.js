@@ -400,3 +400,7 @@ const users = [
     balance: 251863.83,
   },
 ];
+
+/////////////////// A - 1 ///////////////////
+
+const emailsArray = users.map(user => user.email);
