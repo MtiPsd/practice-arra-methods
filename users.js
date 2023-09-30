@@ -433,3 +433,13 @@ const richUsersFromUSA = users.filter(
 );
 
 const usaUserEmails = richUsersFromUSA.map(user => user.email);
+
+/////////////////// A - 5 ///////////////////
+
+const chineseUsers = users.filter(
+  users => users.country.toLowerCase() === "China".toLowerCase(),
+);
+
+const sortedUsersBaseOnBalance = chineseUsers
+  .slice()
+  .sort((a, b) => b.balance - a.balance);
