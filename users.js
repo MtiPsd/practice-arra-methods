@@ -453,3 +453,13 @@ const usersWithLongEmail = users.filter(
 const userNamesWithLongEmails = usersWithLongEmail.map(
   user => `${user.firstName} - ${user.lastName}`,
 );
+
+/////////////////// A - 7 ///////////////////
+
+const usersWithSpacialEmails = users.filter(user =>
+  user.email.endsWith("edu"),
+);
+
+const usersBalanceWithSpacialEmails = usersWithSpacialEmails.map(
+  user => user.balance,
+);
