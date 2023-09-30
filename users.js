@@ -587,3 +587,17 @@ function getYoungFemaleAccountDetails(array) {
 }
 
 getYoungFemaleAccountDetails(users);
+
+/////////////////// A - 16 ///////////////////
+
+function getFrenchBalanceAverage(users) {
+  const frenchUsers = users.filter(
+    user => user.country.toLowerCase() === "France".toLowerCase(),
+  );
+
+  return frenchUsers.reduce((acc, cur, i, arr) => {
+    return acc + cur.balance / arr.length;
+  }, 0);
+}
+
+getFrenchBalanceAverage(users);
