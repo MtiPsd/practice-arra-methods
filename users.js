@@ -404,3 +404,10 @@ const users = [
 /////////////////// A - 1 ///////////////////
 
 const emailsArray = users.map(user => user.email);
+
+/////////////////// A - 2 ///////////////////
+
+const iranians = users.filter(user => user.country === "Iran");
+const iranianNames = iranians.map(
+  iranian => `${iranian.firstName} - ${iranian.lastName}`,
+);
