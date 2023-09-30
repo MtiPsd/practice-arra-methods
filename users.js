@@ -532,3 +532,22 @@ function getRichestUserInfo(array) {
 }
 
 getRichestUserInfo(users);
+
+/////////////////// A - 13 ///////////////////
+
+function getRussianInfo(array) {
+  return array.reduce((acc, cur) => {
+    if (cur.country === "Russia") {
+      const newInfo = {
+        email: cur.email,
+        age: cur.age,
+      };
+
+      acc.push(newInfo);
+    }
+
+    return acc;
+  }, []);
+}
+
+getRussianInfo(users);
