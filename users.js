@@ -443,3 +443,13 @@ const chineseUsers = users.filter(
 const sortedUsersBaseOnBalance = chineseUsers
   .slice()
   .sort((a, b) => b.balance - a.balance);
+
+/////////////////// A - 6 ///////////////////
+
+const usersWithLongEmail = users.filter(
+  user => user.email.length > 30,
+);
+
+const userNamesWithLongEmails = usersWithLongEmail.map(
+  user => `${user.firstName} - ${user.lastName}`,
+);
