@@ -484,3 +484,15 @@ const frenchUsers2 = users.reduce((acc, cur) => {
 }, []);
 
 const frenchUsersCount2 = frenchUsers2.length;
+
+/////////////////// A - 9 ///////////////////
+
+function getTotalBalanceOfMaleUsers(array) {
+  const maleUsers = array.filter(
+    user => user.gender.toLowerCase() === "Male".toLowerCase(),
+  );
+
+  return maleUsers.reduce((acc, cur) => acc + cur.balance, 0);
+}
+
+getTotalBalanceOfMaleUsers(users);
