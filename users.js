@@ -423,3 +423,13 @@ const polygenderUsers = users.filter(
 const polygenderUsersBalance = polygenderUsers.map(
   user => user.balance,
 );
+
+/////////////////// A - 4 ///////////////////
+
+const richUsersFromUSA = users.filter(
+  user =>
+    user.country.toLowerCase() === "United States".toLowerCase() &&
+    Number(user.balance) > 500000,
+);
+
+const usaUserEmails = richUsersFromUSA.map(user => user.email);
