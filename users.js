@@ -601,3 +601,19 @@ function getFrenchBalanceAverage(users) {
 }
 
 getFrenchBalanceAverage(users);
+
+/////////////////// A - 17 ///////////////////
+
+function getIranianUserNames(users) {
+  const poorIranianUsers = users.filter(
+    user =>
+      user.country.toLowerCase() === "Iran".toLowerCase() &&
+      user.age < 300000,
+  );
+
+  return poorIranianUsers.map(
+    user => `${user.firstName} ${user.lastName}`,
+  );
+}
+
+getIranianUserNames(users);
