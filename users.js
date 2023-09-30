@@ -509,3 +509,14 @@ const averageBalance = teenRussians.reduce(
   (acc, cur) => acc + cur.balance / teenRussians.length,
   0,
 );
+
+/////////////////// A - 11 ///////////////////
+
+function getInfoOfYoungMembers(array) {
+  const youngUsers = array.filter(user => user.age < 25);
+  return youngUsers.map(
+    user => `${user.firstName} - ${user.lastName}`,
+  );
+}
+
+getInfoOfYoungMembers(users);
